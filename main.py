@@ -34,12 +34,12 @@ model.compile(optimizer='adam', loss=tf.keras.losses.BinaryCrossentropy(from_log
 
 model.fit(train_batches, epochs=3)
 
-#files.upload()
+files.upload()
 
 
-for i in range(1):
-  #img = load_img(f'{i+1}.jpg')
-  img = PIL.Image.open('0.jpg')
+for i in range(7):
+  img = load_img(f'{i}.jpg')
+  #img = PIL.Image.open('0.jpg')
   #img = urllib.urlopen(imgUrl)
   img_array = img_to_array(img)
   img_resized, _ = resize_image(img_array, _)
